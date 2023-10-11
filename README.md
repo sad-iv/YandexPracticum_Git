@@ -87,22 +87,15 @@ Git хранит таблицу соответствий хеш → информ
 
 Коммит -- это всему голова.
 
-Статусы файлов:
+### Типичный жизненный цикл файла в Git
 
 ```mermaid
 graph LR
-  untracked        -- "git add"     --> staged+tracked
-  staged+tracked -- "Изменения"   --> modified
+  untracked -- "git add" --> staged+tracked
+  staged+tracked -- "Изменения" --> modified
   staged+tracked -- "git commit"  --> tracked
-  modified         -- "git add"     --> staged+tracked
-  tracked          -- "Изменения"   --> modified
-  staged    -- "git commit/git add" --> tracked/comitted
-    
-%% стрелка без текста для примера: 
-  A-->B;
-  A-->C;
-  B-->D;
-  C-->D;
+  modified -- "git add" --> staged+tracked
+  tracked -- "Изменения" --> modified
 ```
 
 
