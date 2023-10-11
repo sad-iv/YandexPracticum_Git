@@ -90,14 +90,13 @@ Git хранит таблицу соответствий хеш → информ
 Статусы файлов:
 
 ```mermaid
-graph LR;
-  untracked        -- "git add"     --> staged + tracked
-  staged + tracked -- "Изменения"   --> modified
-  staged + tracked -- "git commit"  --> tracked
-  modified         -- "git add"     --> staged + tracked
+graph LR
+  untracked        -- "git add"     --> staged+tracked
+  staged+tracked -- "Изменения"   --> modified
+  staged+tracked -- "git commit"  --> tracked
+  modified         -- "git add"     --> staged+tracked
   tracked          -- "Изменения"   --> modified
   staged    -- "git commit/git add" --> tracked/comitted
-  
     
 %% стрелка без текста для примера: 
   A-->B;
